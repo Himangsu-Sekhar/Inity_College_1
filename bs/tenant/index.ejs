@@ -1,0 +1,35 @@
+<% layout('../layouts/main') %>
+
+<h2 class="text-3xl font-bold mb-4">Tenants</h2>
+
+<a href="/tenants/add" class="bg-green-600 text-white px-3 py-2 rounded">
+  + Add Tenant
+</a>
+
+<table class="mt-4 w-full bg-white shadow rounded">
+  <thead class="bg-gray-100">
+    <tr>
+      <th class="p-2 text-left">Name</th>
+      <th class="p-2 text-left">Phone</th>
+      <th class="p-2 text-left">Rent</th>
+      <th class="p-2 text-left">Bed Assigned</th>
+      <th class="p-2 text-center">Actions</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% tenants.forEach(t => { %>
+      <tr class="border-b">
+        <td class="p-2"><%= t.name %></td>
+        <td class="p-2"><%= t.phone %></td>
+        <td class="p-2">₹<%= t.rentAmount %></td>
+        <td class="p-2"><%= t.bedId ? 'Assigned' : 'Not Assigned' %></td>
+
+        <td class="p-2 text-center">
+          <a href="/tenants/<%= t._id %>/edit" class="text-blue-600">Edit</a> |
+          <a href="/tenants/<%= t._id %>/delete" class="text-red-600">Delete</a>
+        </td>
+      </tr>
+    <% }) %>
+  </tbody>
+</table>
