@@ -1,31 +1,3 @@
-// const mongoose = require("mongoose");
-
-// const paymentSchema = new mongoose.Schema(
-//   {
-//     month: { type: Number, required: true },
-//     year: { type: Number, required: true },
-//     status: { type: String, enum: ["paid", "pending"], default: "pending" }
-//   },
-//   { timestamps: true }
-// );
-
-// const tenantSchema = new mongoose.Schema(
-//   {
-//     pgId: { type: mongoose.Schema.Types.ObjectId, ref: "PG", required: true },
-//     roomId: { type: mongoose.Schema.Types.ObjectId, ref: "Room", required: true },
-//     bedId: { type: mongoose.Schema.Types.ObjectId, ref: "Bed", required: true },
-
-//     name: { type: String, required: true },
-//     phone: { type: String, required: true },
-//     rentAmount: { type: Number, required: true },
-
-//     paymentHistory: [paymentSchema]
-//   },
-//   { timestamps: true }
-// );
-
-// module.exports = mongoose.model("Tenant", tenantSchema);
-
 const mongoose = require("mongoose");
 
 const paymentSchema = new mongoose.Schema(
