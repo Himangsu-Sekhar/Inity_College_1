@@ -219,8 +219,8 @@ Live URL:
 
 ## 👨‍💻 Author
 
-**Himangsu Dutta**  
-BCA Student  
+**Himangsu Sekhar**  
+ 
 Project: INITY – Hostel & PG Management System  
 
 ---
